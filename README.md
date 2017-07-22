@@ -13,10 +13,10 @@ dependencies {
 ```
 
 # Use Step
-You just need to follow the following three steps to use
+You just need to follow the following three steps to use.
 
 ## One Step
-In the first Activity, create a ShareElementInfo Object and to convert useful information from need share view. Example for the code below:
+In the first activity, create a ShareElementInfo Object and to convert useful information from need share view. For example the code below:
 
 ```
 ShareElementInfo info = new ShareElementInfo();
@@ -27,7 +27,7 @@ overridePendingTransition(0, 0);
 ```
 
 ## Second Step
-Then in the second Activity which should jump activity, To start share Animation.
+Then in the second activity which should jump activity, To start share Animation.
 
 ```
 ShareElementInfo info = getIntent().getExtras().getParcelable(MainActivity.EXTRA_SHARE_ELEMENT_INFO);
@@ -36,6 +36,12 @@ mShareElement.convert(mImageView)
            .setDuration(ANIMATOR_DURATION)
            .setInterpolator(new LinearInterpolator())
            .startEnterAnimator();
+```
+
+`note`：you should set the `android:them` to transparent int the activity. For example:
+
+```
+<item name="android:windowBackground">@android:color/transparent</item>
 ```
 
 ## Third Step
