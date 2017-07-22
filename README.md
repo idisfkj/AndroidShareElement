@@ -40,27 +40,23 @@ mShareElement.convert(mImageView)
 
 ## Third Step
 
-Finally, I recommend to overriding `onBackPressed` method in order to normal exit the activity.
+Finally, I recommend to overriding `onBackPressed` method in order to efficient exit the activity.
 
 ```
 @Override
 public void onBackPressed() {
-if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-        finishAfterTransition();
-  } else {
-        mShareElement.convert(mImageView)
-                .setDuration(ANIMATOR_DURATION)
-                .setInterpolator(new LinearInterpolator())
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        finish();
-                        overridePendingTransition(0, 0);
-                    }
-                })
-                .startExitAnimator();
-    }
-}
+mShareElement.convert(mImageView)
+        .setDuration(ANIMATOR_DURATION)
+        .setInterpolator(new LinearInterpolator())
+        .setListener(new AnimatorListenerAdapter() {
+              @Override
+              public void onAnimationEnd(Animator animation) {
+                    finish();
+                    overridePendingTransition(0, 0);
+                }
+            })
+        .startExitAnimator();
+   }
 ```
 
 # More Link
