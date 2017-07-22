@@ -1,5 +1,23 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'androidShareElement'
+    publishedGroupId = 'com.idisfkj.share'
+    libraryName = 'AndroidShareElement'
+    artifact = 'sharelibrary'
+    libraryDescription = 'A share animation on Android'
+    siteUrl = 'https://github.com/idisfkj/AndroidShareElement'
+    gitUrl = 'https://github.com/idisfkj/AndroidShareElement.git'
+    libraryVersion = '1.0.0'
+    developerId = 'idisfkj'
+    developerName = 'idisfkj'
+    developerEmail = 'idisfkj@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -29,3 +47,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.0'
     testCompile 'junit:junit:4.12'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
