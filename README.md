@@ -1,4 +1,8 @@
 # AndroidShareElement
+[![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Download](https://api.bintray.com/packages/idisfkj/maven/androidShareElement/images/download.svg?version=1.0.0) ](https://bintray.com/idisfkj/maven/androidShareElement/1.0.0/link)
+[![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16)
+[![Author](https://img.shields.io/badge/Author-idisfkj-orange.svg)](https://idisfkj.github.io/archives/)
 
 Compatible with Android share animation
 
